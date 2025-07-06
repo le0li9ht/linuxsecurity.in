@@ -2,3 +2,29 @@ _site
 .sass-cache
 .jekyll-metadata
 Gemfile.lock
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.env/
+
+# Logs
+*.log
+
+# Secrets
+*.key
+*.pem
+*.env
+config.json
+secrets.txt
+
+# Editor configs
+.vscode/
+.idea/
