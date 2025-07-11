@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ashok Krishna
+title: Welcome linux folks
 email:
 classes: wide
 description: >- # this means to ignore newlines until "baseurl:"
@@ -32,10 +32,42 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+timezone: Asia/Calcutta # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 include:
+  - .htaccess
   - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -76,17 +108,12 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/ashok-krishna-vemuri/"
 
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://x.com/ashokkrishna99"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/le0li9ht"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://instagram.com/in/ashok-krishna-vemuri"
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+search_full_content      : true # true, false (default)
+search_provider          : # lunr (default), algolia, google
+
+# Reading Files
 
 defaults:
   # _posts
@@ -94,12 +121,14 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: home
       author_profile: true
       read_time: true
       comments: true
       share: true
+      show_date: true
       related: true
+      enable_copy_code_button: true
   # _pages
   - scope:
       path: "_pages"
@@ -107,6 +136,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      
 
 category_archive:
   type: liquid
@@ -114,3 +144,35 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+algolia:
+  application_id         : # YOUR_APPLICATION_ID
+  index_name             : # YOUR_INDEX_NAME
+  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
+  powered_by             : # true (default), false
+google:
+  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  instant_search         : # false (default), true
+# SEO Related
+google_site_verification : "918dpNsUEDjoEgVVRTvIrg5DhcVaQdQwFc54qLwDQHI"
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  : 
+
+#bing_site_verification: "F72197164CCB51EF9818C9E4A07EE9DD"
+# Analytics
+analytics:
+  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : "G-4CL31GFWX5"
+    anonymize_ip         : # true, false (default)
+footer:
+  links:
+  copyright:
+    enabled: true
+    powered_by: true
