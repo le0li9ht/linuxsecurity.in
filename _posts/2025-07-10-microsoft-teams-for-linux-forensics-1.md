@@ -186,11 +186,14 @@ Now, let's take a closer look at some important fields from the the-real-index s
 The payload size is a 4-byte value at the beginning of the the-real-index file that indicates how many bytes come after the 8-byte header. It tells Chromium how much serialized index data (entries, metadata, timestamp) to read. This value helps ensure the file is complete and hasn’t been cut off or corrupted.
 In our case the payload size is 26440 bytes and the actual file size is 26448 which means the starting 8 bytes are only extra. So its matching successfully as shown.  
 
-NOTE: Everything after the first 8 bytes up to the end of the message is referred to as the payload.
-
 ![alt](/assets/images/Teams-Forensics/05-SizeFilesystem.png)  
 
 ![alt](/assets/images/Teams-Forensics/03-payload-size.png)    
+
+
+NOTE: Everything after the first 8 bytes up to the end of the message is referred to as the payload.
+{: .notice--info}
+
 
 **What is this crc32?**
 
