@@ -68,7 +68,7 @@ From a digital forensics perspective, the User-Wide location location (~/snap/te
 
 let's understand what each folder means.   
 
-**\<revision\>**(ex:815) – This represents the specific version number of the teams-for-linux Snap package installed on the system. Snap packages maintain multiple older revisions locally. By default, 2 revisions are stored locally, during an update, the system installs the new revision while retaining the previous one.  
+**\<revision\>**(ex:815) \- This represents the specific version number of the teams-for-linux Snap package installed on the system. Snap packages maintain multiple older revisions locally. By default, 2 revisions are stored locally, during an update, the system installs the new revision while retaining the previous one.  
 **common** \- This folder contains data shared across all versions of the snap package.  
 **current** \- This is a symbolic link (shortcut) that points to the currently active revision folder, e.g., 815. By default, every snap will use a symlink current , pointing to the latest available revision. 
 
