@@ -136,7 +136,7 @@ naver_site_verification  :
 #bing_site_verification: "F72197164CCB51EF9818C9E4A07EE9DD"
 # Analytics
 analytics:
-  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : "G-4CL31GFWX5"
     anonymize_ip         : # true, false (default)
