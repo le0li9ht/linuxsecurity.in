@@ -14,6 +14,7 @@ categories:
   - blog
 tags:
   - DFIR
+  - Linux
   - Microsoft Teams For Linux
   - teams-4-linux
   - Microsoft
