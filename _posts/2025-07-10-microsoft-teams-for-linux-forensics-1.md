@@ -360,8 +360,8 @@ Now, let’s take a look at another type of cache entry file — the _s files.
 |0| **MagicNumber**     |8| A unique identifier (magic value) for the file ####_s(Cached entry).                         |
 |8| **Version**     |4| Simple Cache format version - This version number defines the structure and layout of data within that particular cache |
 |12|**Key Length**|4| Length of the URL in bytes.|
-|16|**Key Hash| |4|The key_hash in Chromium’s disk cache is a non-cryptographic hash of the resource’s URL(key), calculated using Paul Hsieh’s SuperFastHash algorithm. It serves as a lightweight, fast lookup mechanism to locate cached data, prioritizing speed over the strong collision resistance and security features found in cryptographic hashes like SHA-256. |
-|-| **Key(URL) |Key Length|The actual cached URL for the resource (e.g., JS, image, etc.).|
+|16|**Key Hash**|4|The key_hash in Chromium’s disk cache is a non-cryptographic hash of the resource’s URL(key), calculated using Paul Hsieh’s SuperFastHash algorithm. It serves as a lightweight, fast lookup mechanism to locate cached data, prioritizing speed over the strong collision resistance and security features found in cryptographic hashes like SHA-256. |
+|-| **Key(URL)** |Key Length|The actual cached URL for the resource (e.g., JS, image, etc.).|
 |-| **SparseRangeMagic** |8|unique identifier for the sparse stream header|
 |-| **offset(StreamOffset)** |8|The StreamOffset starts at 0 and increments by the value of StreamLength for each subsequent stream, i.e., each new StreamOffset is calculated as the previous StreamOffset + StreamLength. Allowing precise calculation of where each stream begins."|
 |-| **length(StreamSize)** |8| Total Stream Size |

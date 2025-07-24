@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-11T14:55:01+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Welcome linux folks</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Ashokkrishna</name></author><entry><title type="html">Microsoft Teams For Linux Forensics - Part 1</title><link href="http://localhost:4000/blog/microsoft-teams-for-linux-forensics-1/" rel="alternate" type="text/html" title="Microsoft Teams For Linux Forensics - Part 1" /><published>2025-07-10T00:00:00+00:00</published><updated>2025-07-10T00:00:00+00:00</updated><id>http://localhost:4000/blog/microsoft-teams-for-linux-forensics-1</id><content type="html" xml:base="http://localhost:4000/blog/microsoft-teams-for-linux-forensics-1/"><![CDATA[<h1 id="the-beginning-of-the-journey">The Beginning of the Journey</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-24T10:22:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Welcome linux folks</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Ashokkrishna</name></author><entry><title type="html">Microsoft Teams For Linux Forensics - Part 1</title><link href="http://localhost:4000/blog/microsoft-teams-for-linux-forensics-1/" rel="alternate" type="text/html" title="Microsoft Teams For Linux Forensics - Part 1" /><published>2025-07-10T00:00:00+00:00</published><updated>2025-07-10T00:00:00+00:00</updated><id>http://localhost:4000/blog/microsoft-teams-for-linux-forensics-1</id><content type="html" xml:base="http://localhost:4000/blog/microsoft-teams-for-linux-forensics-1/"><![CDATA[<h1 id="the-beginning-of-the-journey">The Beginning of the Journey</h1>
 
 <p>I’d just wrapped up a technical interview, and out of nowhere, I felt like reaching out to the person who interviewed me. But here’s the twist — I had joined the Microsoft Teams call as a guest. No login, no notes, nothing. By the time I reopened Teams, poof — the session was gone. So was the name, the email, the chat… everything.</p>
 
@@ -482,7 +482,6 @@ I have created a Python 3 script to extract images from the cache folder as show
       <th><strong>Field</strong></th>
       <th><strong>Size(bytes)</strong></th>
       <th><strong>Description</strong></th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -491,70 +490,60 @@ I have created a Python 3 script to extract images from the cache folder as show
       <td><strong>MagicNumber</strong></td>
       <td>8</td>
       <td>A unique identifier (magic value) for the file ####_s(Cached entry).</td>
-      <td> </td>
     </tr>
     <tr>
       <td>8</td>
       <td><strong>Version</strong></td>
       <td>4</td>
       <td>Simple Cache format version - This version number defines the structure and layout of data within that particular cache</td>
-      <td> </td>
     </tr>
     <tr>
       <td>12</td>
       <td><strong>Key Length</strong></td>
       <td>4</td>
       <td>Length of the URL in bytes.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>16</td>
-      <td>**Key Hash</td>
-      <td> </td>
+      <td><strong>Key Hash</strong></td>
       <td>4</td>
       <td>The key_hash in Chromium’s disk cache is a non-cryptographic hash of the resource’s URL(key), calculated using Paul Hsieh’s SuperFastHash algorithm. It serves as a lightweight, fast lookup mechanism to locate cached data, prioritizing speed over the strong collision resistance and security features found in cryptographic hashes like SHA-256.</td>
     </tr>
     <tr>
       <td>-</td>
-      <td>**Key(URL)</td>
+      <td><strong>Key(URL)</strong></td>
       <td>Key Length</td>
       <td>The actual cached URL for the resource (e.g., JS, image, etc.).</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>SparseRangeMagic</strong></td>
       <td>8</td>
       <td>unique identifier for the sparse stream header</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>offset(StreamOffset)</strong></td>
       <td>8</td>
       <td>The StreamOffset starts at 0 and increments by the value of StreamLength for each subsequent stream, i.e., each new StreamOffset is calculated as the previous StreamOffset + StreamLength. Allowing precise calculation of where each stream begins.”</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>length(StreamSize)</strong></td>
       <td>8</td>
       <td>Total Stream Size</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>data_crc32</strong></td>
       <td>4</td>
       <td>CRC32 checksum for validating the stream</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>unknown</strong></td>
       <td>4</td>
       <td>unknown bytes</td>
-      <td> </td>
     </tr>
   </tbody>
 </table>

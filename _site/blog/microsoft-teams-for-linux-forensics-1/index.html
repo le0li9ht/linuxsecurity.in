@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.27.2 by Michael Rose
   Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -809,7 +809,6 @@ I have created a Python 3 script to extract images from the cache folder as show
       <th><strong>Field</strong></th>
       <th><strong>Size(bytes)</strong></th>
       <th><strong>Description</strong></th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -818,70 +817,60 @@ I have created a Python 3 script to extract images from the cache folder as show
       <td><strong>MagicNumber</strong></td>
       <td>8</td>
       <td>A unique identifier (magic value) for the file ####_s(Cached entry).</td>
-      <td> </td>
     </tr>
     <tr>
       <td>8</td>
       <td><strong>Version</strong></td>
       <td>4</td>
       <td>Simple Cache format version - This version number defines the structure and layout of data within that particular cache</td>
-      <td> </td>
     </tr>
     <tr>
       <td>12</td>
       <td><strong>Key Length</strong></td>
       <td>4</td>
       <td>Length of the URL in bytes.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>16</td>
-      <td>**Key Hash</td>
-      <td> </td>
+      <td><strong>Key Hash</strong></td>
       <td>4</td>
       <td>The key_hash in Chromium’s disk cache is a non-cryptographic hash of the resource’s URL(key), calculated using Paul Hsieh’s SuperFastHash algorithm. It serves as a lightweight, fast lookup mechanism to locate cached data, prioritizing speed over the strong collision resistance and security features found in cryptographic hashes like SHA-256.</td>
     </tr>
     <tr>
       <td>-</td>
-      <td>**Key(URL)</td>
+      <td><strong>Key(URL)</strong></td>
       <td>Key Length</td>
       <td>The actual cached URL for the resource (e.g., JS, image, etc.).</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>SparseRangeMagic</strong></td>
       <td>8</td>
       <td>unique identifier for the sparse stream header</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>offset(StreamOffset)</strong></td>
       <td>8</td>
       <td>The StreamOffset starts at 0 and increments by the value of StreamLength for each subsequent stream, i.e., each new StreamOffset is calculated as the previous StreamOffset + StreamLength. Allowing precise calculation of where each stream begins.”</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>length(StreamSize)</strong></td>
       <td>8</td>
       <td>Total Stream Size</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>data_crc32</strong></td>
       <td>4</td>
       <td>CRC32 checksum for validating the stream</td>
-      <td> </td>
     </tr>
     <tr>
       <td>-</td>
       <td><strong>unknown</strong></td>
       <td>4</td>
       <td>unknown bytes</td>
-      <td> </td>
     </tr>
   </tbody>
 </table>
